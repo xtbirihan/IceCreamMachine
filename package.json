@@ -1,0 +1,14 @@
+{
+  "name": "sap.suite.ui.commons.tutorial.icecream",
+  "version": "1.0.0",
+  "description": "Ice Cream Machine",
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@ui5/cli": "^2.14.9"
+  }
+}
