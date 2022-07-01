@@ -89,6 +89,29 @@
 						</TileContent>
 					</tileContent>
 				</GenericTile>
+                <SlideTile
+                    class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+                    tiles="{news>/News}">
+                    <GenericTile
+                        backgroundImage="{news>image}"
+                        state="{news>state}"
+                        frameType="TwoByOne">
+                        <tileContent>
+                            <TileContent
+                                footer="{
+                                    path: 'news>date',
+                                    formatter: '.formatJSONDate'
+                                }">
+                                <content>
+                                    <NewsContent
+                                        contentText="{news>content}"
+                                        subheader="{news>subheader}">
+                                    </NewsContent>
+                                </content>
+                            </TileContent>
+                        </tileContent>
+                    </GenericTile>
+                </SlideTile>            
 			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
