@@ -53,6 +53,9 @@ sap.ui.define([
         },
         onNavToReviews: function() {    
             this.getRouter().navTo("reviews");
+        },
+        getValuesDelta: function(fFirstValue, fSecondValue) {
+            return fSecondValue - fFirstValue;
         }
 
     });
