@@ -14,7 +14,8 @@
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
 					header="{i18n>startpagePFTileTitle}"
-					subheader="{i18n>startpagePFTileSubTitle}">
+					subheader="{i18n>startpagePFTileSubTitle}"
+					press=".onNavToProcessFlow">
 					<tileContent>
 						<TileContent>
 							<content>
@@ -74,7 +75,8 @@
 				</GenericTile>
 				<GenericTile
 					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-					header="{i18n>startpageUserReviewsTileTitle}">
+					header="{i18n>startpageUserReviewsTileTitle}"
+                     press=".onNavToReviews">
 					<tileContent>
 						<TileContent>
 							<content>
@@ -89,45 +91,58 @@
 						</TileContent>
 					</tileContent>
 				</GenericTile>
-                <SlideTile
-                    class="sapUiTinyMarginBegin sapUiTinyMarginTop"
-                    tiles="{news>/News}">
-                    <GenericTile
-                        backgroundImage="{news>image}"
-                        state="{news>state}"
-                        frameType="TwoByOne">
-                        <tileContent>
-                            <TileContent
-                                footer="{
-                                    path: 'news>date',
-                                    formatter: '.formatJSONDate'
-                                }">
-                                <content>
-                                    <NewsContent
-                                        contentText="{news>content}"
-                                        subheader="{news>subheader}">
-                                    </NewsContent>
-                                </content>
-                            </TileContent>
-                        </tileContent>
-                    </GenericTile>
-                </SlideTile>                            
+				<GenericTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					header="{i18n>startpageTestResultsTileTitle}"
+					subheader="{i18n>startpageTestResultsTileSubTitle}"
+					press=".onNavToChartContainer">
+					<tileContent>
+						<TileContent>
+							<content>
+								<ImageContent src="sap-icon://temperature"/>
+							</content>
+						</TileContent>
+					</tileContent>
+				</GenericTile>
+				<SlideTile
+					class="sapUiTinyMarginBegin sapUiTinyMarginTop"
+					tiles="{news>/News}">
+					<GenericTile
+						backgroundImage="{news>image}"
+						state="{news>state}"
+						frameType="TwoByOne">
+						<tileContent>
+							<TileContent
+								footer="{
+									path: 'news>date',
+									formatter: '.formatJSONDate'
+								}">
+								<content>
+									<NewsContent
+										contentText="{news>content}"
+										subheader="{news>subheader}">
+									</NewsContent>
+								</content>
+							</TileContent>
+						</tileContent>
+					</GenericTile>
+				</SlideTile>
 			</layout:HorizontalLayout>
-            <Title
-                titleStyle="H2"
-                text="{i18n>startpageLinksGroupTitle}"
-                class="sapUiTinyMarginBegin sapUiMediumMarginTop" />
-            <layout:HorizontalLayout allowWrapping="true">
-                <GenericTile
-                    header="{i18n>startpageLineTile1Title}"
-                    subheader="{i18n>startpageLineTile1SubTitle}"
-                    mode="LineMode"
-                    class="sapUiTinyMarginBegin" />
-                <GenericTile
-                    header="{i18n>startpageLineTile2Title}"
-                    mode="LineMode"
-                    class="sapUiTinyMarginBegin" />
-            </layout:HorizontalLayout>            
+			<Title
+				titleStyle="H2"
+				text="{i18n>startpageLinksGroupTitle}"
+				class="sapUiTinyMarginBegin sapUiMediumMarginTop"/>
+			<layout:HorizontalLayout allowWrapping="true">
+				<GenericTile
+					header="{i18n>startpageLineTile1Title}"
+					subheader="{i18n>startpageLineTile1SubTitle}"
+					mode="LineMode"
+					class="sapUiTinyMarginBegin"/>
+				<GenericTile
+					header="{i18n>startpageLineTile2Title}"
+					mode="LineMode"
+					class="sapUiTinyMarginBegin"/>
+			</layout:HorizontalLayout>
 		</layout:VerticalLayout>
 	</Page>
 </mvc:View>
